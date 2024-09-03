@@ -4,9 +4,4 @@ from .models import Review
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('movie', 'comment', 'stars')
-
-    
-    
-   
-    
+    list_display = ('movie', 'comment', 'stars',)

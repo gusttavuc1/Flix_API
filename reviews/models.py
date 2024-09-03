@@ -10,7 +10,7 @@ class Review(models.Model):
         on_delete=models.PROTECT,
         related_name='reviews'
     )
-    starts = models.IntegerField(
+    stars = models.IntegerField(
         validators=[
             MinValueValidator(0, 'Avaliação deve ser maior ou igual a 0 estrelas'),
             MaxValueValidator(5, 'Avaliação deve ser menor ou igual a 5 estrelas')

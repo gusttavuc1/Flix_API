@@ -20,10 +20,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('genres/', include('genres.urls', namespace='genres')),  # Incluindo URLs do aplicativo 'genres'
-    path('actors/', include('actors.urls', namespace='actors')),  # Incluindo URLs do aplicativo 'genres'
-    path('movies/', include('movies.urls', namespace='movies')),  # Incluindo URLs do aplicativo 'genres'
-    path('reviews/', include('reviews.urls', namespace='movies')),  # Incluindo URLs do aplicativo 'genres'
+    path('api/v1/genres/', include('genres.urls', namespace='genres')),  # Incluindo URLs do aplicativo 'genres'
+    path('api/v1/actors/', include('actors.urls', namespace='actors')),  # Incluindo URLs do aplicativo 'genres'
+    path('api/v1/movies/', include('movies.urls', namespace='movies')),  # Incluindo URLs do aplicativo 'genres'
+    path('api/v1/reviews/', include('reviews.urls', namespace='reviews')),  # Incluindo URLs do aplicativo 'genres'
     
 
 ]

@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import ActorCreateListView, ActorRetrieveUpdateDestroyView
+from . import views
 
 
 app_name = 'actors'  # Opcional, mas útil para namespaces
 
 urlpatterns = [
-    path('', ActorCreateListView.as_view(), name='ActorCreateListView'),  # Página inicial para 'genres'
-    path('<int:pk>/', ActorRetrieveUpdateDestroyView.as_view(), name='ActorRetrieveUpdateDestroyView'),  # Detalhes de um gênero específico
+    path('', views.ActorCreateListView.as_view(), name='ActorCreateListView'),  # Página inicial para 'genres'
+    path('<int:pk>/', views.ActorRetrieveUpdateDestroyView.as_view(), name='ActorRetrieveUpdateDestroyView'),  # Detalhes de um gênero específico
     # Adicione outras URLs do aplicativo aqui
 ]

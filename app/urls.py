@@ -24,6 +24,6 @@ urlpatterns = [
     path('api/v1/actors/', include('actors.urls', namespace='actors')),  # Incluindo URLs do aplicativo 'genres'
     path('api/v1/movies/', include('movies.urls', namespace='movies')),  # Incluindo URLs do aplicativo 'genres'
     path('api/v1/reviews/', include('reviews.urls', namespace='reviews')),  # Incluindo URLs do aplicativo 'genres'
-    
+    path('api/v1/autentication/', include('autentication.urls')),
 
 ]

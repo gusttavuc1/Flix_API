@@ -1,4 +1,4 @@
-Claro! Aqui está o texto do `README.md` com suas informações:
+
 
 ---
 

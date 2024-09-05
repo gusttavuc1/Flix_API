@@ -2,12 +2,12 @@ from rest_framework import permissions
 
 
 class GlobalDefaultPermissions(permissions.BasePermission):
-    
+
     def has_permission(self, request, view):
         # preciso descobrir um código para retorno uma string no padrão f'{app_name}.{action_name}{model_name}'
         model_permission_codename = self.__get_model_permission_codename(
-            method = request.method,
-            view = view
+            method=request.method,
+            view=view
         )
         if not model_permission_codename:
             return False

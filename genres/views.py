@@ -4,6 +4,7 @@ from .models import Genre
 from genres.serializers import GenreSerializer
 from app.permissions import GlobalDefaultPermissions
 
+
 class GenreCreateListView(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated, GlobalDefaultPermissions,)
     queryset = Genre.objects.all()
@@ -16,7 +17,7 @@ class GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = GenreSerializer
 
 
-#Sem usar DRF
+# Sem usar DRF
 # Create your views here.
 """ @csrf_exempt
 def genre_create_list_view(request):
@@ -38,17 +39,17 @@ def genre_detail_view(request, pk):
     except Exception as e:
         print(f"Error finding genre: {e}")
         return JsonResponse({'error': 'Genre not found'}, status=404)
-    
+
     if request.method == 'GET':
         data = {'id': genre.id, 'name': genre.name}
         return JsonResponse(data)
-        
+
     elif request.method == 'PUT':
         data = json.loads(request.body.decode('utf-8'))
         genre.name = data.get('name')
         genre.save()
         return JsonResponse({'id': genre.id, 'name': genre.name})
-    
+
     elif request.method == 'DELETE':
         genre.delete()
         return JsonResponse({'message': 'Genero Excluido com sucesso.'}, status=204,) """
